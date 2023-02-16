@@ -1,8 +1,12 @@
-var a = 10;
-var b = 2;
-
-for(var i=1; i<5; i+=2){
-    a += i;
+var obj1 = {
+    name: "seo",
+    print: function() {
+      console.log(this.name);   // this가 참조되는 위치
+    }
 }
-
-console.log(a+b);
+var obj2 = { name: "jeong", print: obj1.print };
+var name = "kuk";
+var print = obj1.print;
+print();           // kuk
+obj1.print();      // jeong
+obj2.print();      // seo
