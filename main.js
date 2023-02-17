@@ -8,5 +8,5 @@ var obj2 = { name: "jeong", print: obj1.print };
 var name = "kuk";
 var print = obj1.print;
 print();           // kuk
-obj1.print();      // jeong
-obj2.print();      // seo
+obj1.print();      // seo
+obj2.print();      // jeong

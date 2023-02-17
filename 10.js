@@ -23,13 +23,13 @@ const level = 5;
 
 for (i = 1 ; i <= level ; i++) {
     let tree = "";
-    for (let k = 1 ; k<=level-i ; k++) {
+        for (let k = 1 ; k<=level-i ; k++) {
     //공백증가 포문
-    tree = tree + " ";
-    }
-    for (let j = 1 ; j <= i*2-1 ; j++) {
+        tree = tree + " ";
+        }
+        for (let j = 1 ; j <= i*2-1 ; j++) {
         tree = tree + "*";
-    }
+        }
     console.log(tree);
 
 }
