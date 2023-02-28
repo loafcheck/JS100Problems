@@ -1,15 +1,25 @@
-// const weightLimit = "100";
-const weightLimit = prompt("무게제한을 입력해주세요");
-// const memberCount = "5";
-const memberCount = prompt("몇명이 탈 계획인가요?")
+/*
 
-let count = 0;
-let totalWeight = 0;
+# 문제41 : 소수판별
 
-for (let i = 0 ; i < memberCount ; i++) {
-    totalWeight = totalWeight + parseInt(prompt("몸무게 입력해주세요"), 10);
-    if (totalWeight <= weightLimit ) {
-        count++;
+숫자가 주어지면 소수인지 아닌지 판별하는 프로그램을 작성해주세요.
+소수이면 YES로, 소수가 아니면 NO로 출력해주세요.
+(소수 : 1과 자기 자신만으로 나누어떨어지는 1보다 큰 양의 정수)
+*/
+
+const prime = 11;
+function primeFunction (n) {
+    for (let i = 2 ; i < n ; i++) {
+        if (n % i === 0) {
+            console.log("no")
+            return false;
+        }
     }
+    if (n === 1) {
+        console.log("no")
+        return false;
+    }
+    console.log("yes")
 }
-console.log(count);
+
+primeFunction(prime);
