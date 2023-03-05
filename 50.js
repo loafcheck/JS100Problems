@@ -28,3 +28,14 @@ const items = "9 5 1 2 6 7".split(' ').map((n) => {
 });
 
 console.log(bubble(items));
+
+//undefined 는 undefined 이다. 언디파인은 데이터타입이 언디파인형이다. 
+//숫자와 숫자가 아닌것을 비교할때 연산자는 false를 반환한다.
+/*
+if (result[j] > result[j + 1]) {
+        let value = result[j]
+         result[j] = result[j+1]
+         result[j+1] = value
+      }
+>>result[6]번째가 undefined여도 괜찮은 이유!
+*/
