@@ -8,7 +8,9 @@
       const left = arr.slice(0,mid);
       const right = arr.slice(mid);
 
-    return merge(mergeSort(left), mergeSort(right)); 
+      return merge(mergeSort(left),mergeSort(right));
+    return merge(mergeSort(left));
+    return merge(mergeSort(right)); 
     
   }
 
@@ -30,10 +32,9 @@
     }
     return result;
   }
-  console.log('🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥')
   
   const array = '6 3 1 7'.split(' ').map(n => parseInt(n, 10));
   
-  console.log('This if final' + mergeSort(array));
-  
+  console.log(mergeSort(array));
+
 </Script>
