@@ -1,0 +1,31 @@
+<!-- mergeSort function stack order -->
+<script>
+
+    function mergeSort(arr){
+      console.log ('arr is =' + arr)
+        if (arr.length <= 1){
+          console.log('return arr' + arr);
+          return arr;
+        }
+        console.log ('if가아님' + arr)
+      
+        const mid = Math.floor(arr.length / 2);
+        console.log('mid = '+ mid);
+        const left = arr.slice(0,mid);
+        console.log('left = '+ left);
+        const right = arr.slice(mid);
+        console.log('right = ' + right);
+    
+        console.log('hmmmmmmmmmmm');
+        
+        mergeSort(left);
+        console.log('🍒left arr' + left);
+        mergeSort(right);
+        console.log('🍒right arr' + left);
+      
+      }
+    
+    mergeSort([1,8,4,2]);
+    
+    </script>
+    
