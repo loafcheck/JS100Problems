@@ -4,21 +4,23 @@
       return arr;
     }
   
-    const pivot = arr[0];
-    const left = [];
-    const right = [];
+    const pivot = arr[0]; //[1] //[7]
+    const small = []; // [] // [3]
+     const big = []; //[7 3] //
   
-    for (let i=1; i<arr.length; i++){
-      if(arr[i]<pivot){
-        left.push(arr[i]);
+    for (let i=1; i<arr.length; i++){ //[1, 7, 3] //[7 3]
+      if(arr[i]<pivot){ //p: 1 //p:7
+        small.push(arr[i]);
       } else {
-        right.push(arr[i]);
+        big.push(arr[i]);
       }
     }
-    return quickSort(left) + pivot + quickSort(right)
+    return quickSort(small) + pivot + quickSort(big)
+    // pivot 1
+    // quickSort(small) 3 + 7
   }
   
-  const array = [1,7,2,6];
+  const array = [1,7,3];
   
   console.log(quickSort(array));
 </script>
