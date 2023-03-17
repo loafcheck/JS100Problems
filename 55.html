@@ -1,0 +1,33 @@
+/*
+1개:
+[A,C]
+2개: 
+[A,B][A,C][B,C]
+3개:
+[A,C][A,B][C,B][A,C]/ 재귀 [C,A][B,C][A,C]
+
+2의 n승에 -1번의 순회 횟수를 가진다. 
+*/
+<script>
+const route = [];
+//순회 경로입니다. 어느 기둥에서 어느기둥으로 기록. 
+
+function hanoi(num, start, end, temp){
+  //원판이 한 개일 때에는 바로 옮기면 됩니다.
+  if (num === 1) { 
+    route.push([start, end]);
+    return 1;
+  }
+
+  //원반이 n-1개를 경유기둥으로 옮기고
+  hanoi(num-1, start, temp, end);
+  //가장 큰 원반은 목표기둥으로
+  route.push([start,end]);
+  //경유기둥과 시작기둥을 바꿉니다.
+  hanoi(num-1, temp, end, start);
+}
+
+hanoi(3, 'A', 'C', 'B');
+console.log(route);
+console.log(route.length); 
+</script>
