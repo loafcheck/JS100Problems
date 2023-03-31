@@ -11,6 +11,6 @@ function gameSolution (n) {
      return clapCount;
 }
 
-const userInput = prompt():
+const userInput = prompt()
 const gameInput = userInput.split('')
 console.log(gameSolution(gameInput));
