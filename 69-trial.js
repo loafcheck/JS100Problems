@@ -22,9 +22,9 @@ for (let i = 2; i < 100; i++) {
 }
  
 for (let n of prime) {
-    if (prime.includes(value - n)) {
-        골드바흐파티션.push([n , val - n])
-    }
+    if (prime.includes(value - n) ) {
+        골드바흐파티션.push([n , value - n])
+    } 
 }
 //만약 100에서 뺀 소수 값이 prime 정렬안에 들어 있다면
 console.log(골드바흐파티션);
